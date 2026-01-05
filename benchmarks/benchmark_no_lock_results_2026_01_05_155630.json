@@ -1,0 +1,7 @@
+{
+  "poetry_time": 13.282213926315308,
+  "uv_time": 0.2993001937866211,
+  "winner": "uv",
+  "speedup": 44.37756540774091,
+  "summary": "Winner: uv (44.4x faster)"
+}

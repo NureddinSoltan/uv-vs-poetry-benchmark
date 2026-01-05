@@ -43,3 +43,9 @@ Things already done and things planned to make the benchmark more accurate and f
 <!-- - [ ] Test offline installation (if possible) -->
 <!-- - [ ] Add charts/graphs for visual comparison -->
 - [ ] Add Docker / Docker Compose benchmarks (including image size)
+
+
+### These're the libraries that I'm using for testing:
+```bash
+django django-bolt django-rest-api fastapi pymongo loguru jinja2 passlib pyjwt cryptography boto3 fernet-cli pillow python-multipart rq base32-crockford requests faker ruamel-yaml s3cmd pytest snakeviz bcrypt xlsxwriter ruff pre-commit httpx weasyprint dateparser net-tools sysstat gnureadline pd pympler pydantic firebase-admin premailer sentry-sdk langchain langchain-openai langchain-google-genai langchain-anthropic opencv-python qrcode numpy pandas openpyxl pymupdf mongomock
+```

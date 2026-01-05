@@ -75,10 +75,15 @@ results = {
     "speedup": speedup,
     "summary": f"Winner: {winner} ({speedup:.1f}x faster)",
 }
-timestamp = datetime.now().strftime("%Y_%m_%d_%H%M%S")
-filename = f"benchmark_no_lock_results_{timestamp}.json"
 
-with open(filename, "w") as f:
+timestamp = datetime.now().strftime("%Y_%m_%d_%H%M%S")
+
+benchmarks_dir = Path("benchmarks")
+benchmarks_dir.mkdir(exist_ok=True)
+
+output_file = benchmarks_dir / f"benchmark_no_lock_results_{timestamp}.json"
+
+with open(output_file, "w") as f:
     json.dump(results, f, indent=2)
 
-print("\nResults saved to benchmark_with_lock_results.json")
+print(f"\nResults saved to {output_file}")
