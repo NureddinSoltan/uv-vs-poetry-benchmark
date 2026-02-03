@@ -2,20 +2,25 @@
 
 This repository exists to compare the speed of UV and Poetry, mainly focusing on dependency resolution and installation time.
 
-I’m keeping this benchmark intentionally simple and practical. The main question I want to answer is:
+I’m keeping this benchmark simple and practical. The main question I want to answer is:
 
 >  How much time are we wasting per CI run or per local install?
 
 I’ll also test both tools inside a Docker container, since I have a hypothesis that the results may differ there.
-Spoiler alert: I expect UV to win  but let’s measure instead of guessing 🙂
+Spoiler alert: I expect UV to win, but let’s measure instead of guessing 🙂
+
+## How to run it:
+1. Open the **uv_vs_poetry** folder.
+2. run either `uv_vs_poetry.py` or `uv_vs_poetry_no_lock_files.py`
 
 
+## Libraries used for testing (49 libraries)
+```bash
+django django-bolt django-rest-api fastapi pymongo loguru jinja2 passlib pyjwt cryptography boto3 fernet-cli pillow python-multipart rq base32-crockford requests faker ruamel-yaml s3cmd pytest snakeviz bcrypt xlsxwriter ruff pre-commit httpx weasyprint dateparser net-tools sysstat gnureadline pd pympler pydantic firebase-admin premailer sentry-sdk langchain langchain-openai langchain-google-genai langchain-anthropic opencv-python qrcode numpy pandas openpyxl pymupdf mongomock
+```
 
 ## TODO: Benchmark Improvements
-
-Things already done and things planned to make the benchmark more accurate and fair.
-
-> For now I'm kinda satisfied with the result
+> For now, I’m mostly satisfied with the results and feel they answer the comparison question. In the future, we can improve the benchmark to make it more solid and accurate.
 
 ### Completed
 
@@ -44,8 +49,3 @@ Things already done and things planned to make the benchmark more accurate and f
 <!-- - [ ] Add charts/graphs for visual comparison -->
 - [ ] Add Docker / Docker Compose benchmarks (including image size)
 
-
-### These're the libraries that I'm using for testing:
-```bash
-django django-bolt django-rest-api fastapi pymongo loguru jinja2 passlib pyjwt cryptography boto3 fernet-cli pillow python-multipart rq base32-crockford requests faker ruamel-yaml s3cmd pytest snakeviz bcrypt xlsxwriter ruff pre-commit httpx weasyprint dateparser net-tools sysstat gnureadline pd pympler pydantic firebase-admin premailer sentry-sdk langchain langchain-openai langchain-google-genai langchain-anthropic opencv-python qrcode numpy pandas openpyxl pymupdf mongomock
-```
